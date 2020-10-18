@@ -12,10 +12,10 @@
     <div class="v10_3">
         <div class="left_arrow"></div>
         <div class="right_arrow"></div>
-        <div class="enter_community"></div>
+        <div class="enter_community" onclick = clickCommunity()></div>
         <div class="name"></div>
         <div class="name"></div>
-        <div class="v10_8"></div>
+        <div class="v10_8" onclick = "clickSingleNotebook()"></div>
         <div class="v10_7"></div>
         <div class="name"></div>
         <div class="v10_45">
@@ -34,16 +34,17 @@
             <div class="name"></div>
         </div>
         <div class="name"></div>
-        <div class="v10_21"></div>
-        <div class="v10_22" onclick = "click()"></div>
-        <div class="v10_17"></div>
-        <div class="v10_19"></div>
-        <div class="v10_18"></div>
+        <div class="SingleNotebook", onclick = "clickSingleNotebook()">
+            <div class="v10_21"></div>
+            <div class="v10_22" onclick = "click()"></div>
+            <div class="v10_17"></div>
+            <div class="v10_19"></div>
+            <div class="v10_18"></div>
+        </div>
         <div class="plus" onclick = "clickaddNew()">+</div>
     </div>
 <script>
     function clickaddNew() {
-    alert("Handler for .click() called.");
     window.location.href = "addNew";
 }
 

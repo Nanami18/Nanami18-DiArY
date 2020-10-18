@@ -3,7 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
-    <link href="addNew.css" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename="addNew.css") }}" rel="stylesheet"/>
     <title>addNewDiary</title>
 </head>
 <body>
@@ -44,8 +44,13 @@
         <div class="write"></div>
         <span class="saved_to">Saved to: xxxxx</span>
         <div class="finish"></div>
-        <span class="finish_text">Finish</span>
+        <span class="finish_text" onclick="clickmainpage()">Finish</span>
     </div>
+<script>
+function clickmainpage(){
+    window.location.href = "http://127.0.0.1:5000/ ";
+}
+</script>
 </body>
 </html>
 
