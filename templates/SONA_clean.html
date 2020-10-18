@@ -1,0 +1,944 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{url_for('static', filename = 'Orientation_Toolbox.js')}}"></script>
+<script src="https://timbrady.org/turk/TimTurkTools.js"></script>
+<link rel="stylesheet" type="text/css" href="https://psyc241.ucsd.edu/S_Tim/UMI_Task_v7_centerCue_fix/support/contReport_v5.css">
+<link rel="stylesheet" type="text/css" href="https://psyc241.ucsd.edu/S_Tim/UMI_Task_v7_centerCue_fix/support/showTrials_v5.css">
+
+
+<style type="text/css">.trialDiv {
+
+      /* border: 2px solid gray;*/
+      border: 0px;
+      padding: auto;
+      width: auto;
+      position: relative;
+      top: 20px;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: none;
+    }
+
+    body {
+
+      font-family: Arial, Helvetica;
+      background-color: #808080;
+      font-size: 12pt;
+    }
+
+    #submitButton {
+      display: none;
+    }
+
+    #instructions {
+      width: 60%;;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    #startExperiment {
+      color: rgb(200,200,200);
+      text-decoration: none;
+    }
+
+    #startExperiment:hover{
+      color: white;
+    }
+
+    #startExperimentButton {
+      width: 200px;
+      text-align: center;
+      border: 4px outset gray;
+      background: gray;
+      padding: 5px;
+      margin: 0 auto;
+    }
+
+    #meter{
+    width: 10cm;
+    height: 10cm;
+    }
+
+    .instr {
+      display: none;
+    }
+    #done {
+    display: none;
+    }
+
+</style>
+
+<p align="center"><a href=vmd_timestamp ><button class=grey style="height:75px;width:150px">vmd timestamp</button></a></p>
+
+<div class="taskDiv" id="done">Saving data...</div>
+
+<p><input id="submitButton" name="submitButton" style="display: none" type="submit" value="Submit" /></p>
+
+<div id="instructions">
+<h2>This task is a orientation memory task.<br />
+Please only do 1 HIT of this task, do not repeat it.</h2>
+
+<p>This HIT will take approximately 20 minutes. You will have to remember the orietation of gratings and report them.
+	Please do not participate if you do not have normal or corrected-to-normal vision (wearing glasses or contacts is fine). During the HIT, you'll perform 120 trials of the same task; each trial lasts about 10 seconds.
+</p>
+    <p>&nbsp<b>You will not be able to submit the test until you finished all of the trials, so please ensure you have enough time before accepting this HIT</b></p>
+
+<p><b>To proceed, please go fullscreen. Your screen needs to be > than 800 pixels and your browser window > 80% of your screen width to proceed. </b><br />
+<p><b>NOTE: This HIT is only tested on the Google Chrome Browser and may be incompatable with others. </b><br />
+
+Press <b>F11</b> to go full screen on a Windows PC</p>
+
+<p style="font:5px">Clicking on the button will indicate that you have read this consent document and agree to participate.</p>
+
+<div id="startExperimentButton"><a href="#" id="startExperiment">Start Experiment</a></div>
+
+<p>&nbsp;</p>
+
+<div align="justify" id="consent" style="height:120px; border:1px solid #ccc;font:12px Arial, Helvetica; overflow:auto">
+<p align="center"><b>UNIVERSITY OF CALIFORNIA, SAN DIEGO<br />
+CONSENT TO ACT AS A RESEARCH SUBJECT</b></p>
+
+<p><br />
+Dr. John Serences is conducting a research study to learn more about how attention affects how you see things (perception) and how you make simple decisions. There will be approximately 5,000 participants in the study over the next 10 years.
+
+<p><br />
+<b>PROCEDURES.</b>  If you agree to be in this study by clicking <b>Start Experiment</b> button and continuing to this task, the following will happen to you: You will be presented with stimuli that consist of simple shapes presented on a computer screen. You will respond with button presses and/or using your computer mouse.
+<p><br />
+<b>RISKS.</b> You will be required only to continue to interact with your web browser and make responses for a short duration. Thus, no potential risks or discomforts are anticipated except for the possibility that some tasks may be slightly boring. However, there may be risks that are currently unforeseeable.
+
+<p><br />
+<b>PAYMENT/REMUNERATION.</b> In consideration of your time and effort you will receive extra course credit for your participation via the SONA system (0.5 credits per 30 minutes, rounded up to the nearest 30-minute increment)
+
+<p><br />
+<b>RIGHTS.</b> If you are injured as a direct result of participation in this research, the University of California will provide any medical care you need to treat those injuries. The University will not provide any other form of compensation to you if you are injured. You may call the Human Research Protections Program at 858-246- 4777 for more information about this, to inquire about your rights as a research subject, or to report research- related problems.
+<p><br />
+<b>BENEFITS.</b> There will be no direct benefit to you from these procedures. However, the investigator may learn more about basic questions pertaining to attention, memory and vision. This knowledge may have benefits to society in fields ranging from improving education to visual design, but these benefits will be indirect.
+<p><br />
+<b>EXPLANATION.</b> Dr. John Serences or a member of his research team has explained this study to you and answered your questions. If you have other questions or research-related problems, you may reach him at 858- 534-3686
+<p><br />
+<b>VOLUNTARY NATURE OF PARTICIPATION.</b> Participation in this research is entirely voluntary. There is no cost to you for participating. The alternative to participating is not participating. You may refuse to participate or you may withdraw at any time without jeopardy to the medical care you will receive at this institution, without loss of any access to the care to which you are entitled, or loss of the benefits to which you are entitled. You may also be withdrawn from the study if the investigator feels it is in your best interest or for other study-related purposes. If you wish to withdraw from the study tell a member of the study staff and the testing session will terminate immediately. You will be compensated for the time you have spent.
+<p><br />
+<b>CONFIDENTIALITY.</b> Research records will be kept confidential to the extent provided by law. Research records will only be accessible by Dr Serences and his research team, and by the UCSD Institutional Review Board. You have received a copy of this consent document.
+<p><br />
+By clicking <b>Start Experiment</b>, you are indicating that you are at least 18 years old, have read this consent form and agree to participate in this research study. Please print a copy of this page for your records.</p>
+
+<p>&nbsp;</p>
+</div>
+</div>
+
+<div align="center"><canvas height="500" id="myCanvas" style="cursor:default;border:none;outline-width:2px;outline-color:#000000;background:#808080;" width="1200"> </canvas>
+
+<p id="instr">&nbsp;</p>
+</div>
+
+<div class="trialDiv" id="frame1">
+    <p><b>The following slides will be the instruction of how to perform trials</b><br />
+<p>Please keep your eyes at in the middle (where the <b>+</b> is).<br />
+A grating will appear around this fixation point. <br />
+<br />
+Please press <b>space bar</b> to see what the grating will look like.</p>
+</div>
+
+<div class="trialDiv" id="frame21">
+<p><br />
+    The first grating will exist for 5 seconds, then the noise - second grating - noise sequence will appear. <br/>You will have to remember the <b>orientation of the second grating </b> as precisely as possible.<br />
+
+<br />
+Please press <b>space bar</b> to see what the noise patches look like.</p>
+</div>
+
+<div class="trialDiv" id="frame22">
+<p><br />
+The noise patches ensure an after-image does not remain on your screen.<br/>
+After the noise patches disappear, you will be able to make a response.<br/>
+<br/>Please press <b>space bar</b> to continue.<br/></p>
+</p>
+
+</div>
+
+
+<div class="trialDiv" id="frame4">
+<p><br />
+You will know that you can make a response when you see this thin circle.<br/>
+Please move your mouse and try to align the little two circles to match the orientation of the target.<br />
+The easiest way is to move the cursor along the edge of the circle. You will <b> always </b> respond to the orientation of the second grating(the one that appear briefly).
+<br />
+Once you have the orientation you want to submit, please <b>click</b> to continue.</p>
+</div>
+
+<div class="trialDiv" id="frame5">
+<p><br/>
+As a feedback,...<br/>
+If your report is very close to the target (within 10 degrees), the plus sign will turn green.<br/>
+If your report is okay (within 25 degrees), the plus sign will turn yellow.<br />
+If your report is not quite close to the target (more than 25 degrees), the plus sign will turn red.<br />
+Please press <b>space bar</b> to continue.</p>
+</div>
+
+<div class="trialDiv" id="frame6">
+<p><br />
+    <b>This is the end of the instruction, you will perform real trials then</b><br/><br/>
+The next trial will come soon with a new orientation for the second grating<br/>
+Please try to remember it and report the orientation as <b>precisely</b> as you can.<br/>Press <b>space bar</b> to start the trail, you will watch a grating for 20 seconds at first(only once)
+<br />
+</p>
+</div>
+
+<p id="debug">&nbsp;</p>
+
+<form action="examplePause.php" id="record" method="post" name="nextpage"><input id="targ" name="targ" type="hidden" value="[0,0,0,0,0,0,0,0,0,0,0,0]" /> <input id="resp" name="resp" type="hidden" value="[0,0,0,0,0,0,0,0,0,0,0,0]" /> <input id="targAng" name="targAng" type="hidden" value="[0,0,0,0,0,0,0,0,0,0,0,0]" /> <input id="respAng" name="respAng" type="hidden" value="[0,0,0,0,0,0,0,0,0,0,0,0]" /> <input id="rt" name="rt" type="hidden" value="0" /></form>
+
+<!-- Survey -->
+<section class="container" id="Survey"
+         style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">
+
+  <div class="row col-xs-12 col-md-12"><!-- Instructions -->
+
+    <div class="panel panel-primary">
+
+      <div class="panel-heading"><strong>Race and Ethnicity Form (!YOU MUST HIT SAVE BUTTON FOR SONA CREDIT!) </strong>
+      </div>
+
+      <div class="panel-body">
+
+        <p>Please fill out the following demographics survey before you submit your results. If choosing to not report,
+          please select "Unknown or not reported".</p>
+
+      </div>
+
+    </div>
+    <!-- End Instructions -->
+
+    <!-- Survey Body -->
+    <section>
+      <fieldset>
+        <label>1. What is your gender? </label>
+
+        <div class="radio">
+          <label>
+            <input name="Gender" type="radio" value="Male"/>Male
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Gender" type="radio" value="Female"/>Female
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Gender" type="radio" value="Other"/>Non-binary or Other
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Gender" type="radio" value="NoResponse"/>Unknown or not reported
+          </label>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <label>2. Which ethnicity best describes you? </label>
+
+        <div class="radio">
+          <label>
+            <input name="Ethnicity" type="radio" value="Hispanic/Latino"/>Hispanic or Latino
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Ethnicity" type="radio" value="NonHispanic"/>Not Hispanic or Latino
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Ethnicity" type="radio" value="NoResponse"/>Unknown or not reported
+          </label>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <label>3. Which race best describes you? (Please choose only one) </label>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="AmericanIndian"/>American Indian or Alaskan Native
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="Asian"/>Asian
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="PacificIslander"/>Pacific Islander
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="Black"/>Black or African American
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="White"/>White/Caucasian
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="MoreThanOne"/>More Than One Race
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input name="Race" type="radio" value="NoResponse"/>Unknown or not reported
+          </label>
+        </div>
+
+      </fieldset>
+
+    </section>
+
+    <section>
+      <form id="age_form">
+        <strong>Enter a number for your age: <input type="number" id="ageNumber" name="ageNumber"></strong><br>
+      </form>
+    </section>
+
+    <!-- End Survey Body -->
+    <button type="next" id="testButton" value="Next" onclick="checkValue()">Save</button>
+  </div>
+</section>
+<!-- close container -->
+
+<script>
+
+        // Settings
+        $('#Survey').hide()
+        var c1=document.getElementById("myCanvas");
+        var ctx1=c1.getContext("2d");
+        var centerX=c1.width/2;
+        var centerY=c1.height/2;
+        var LRpos = centerX*0.75/2;
+        var picsiz = Math.ceil(LRpos*1.5)*1.5;
+        var LRpos = 0;
+        var width=c1.width;
+        var height=c1.height;
+        var objSize=35;
+        var objDist=100;
+        var wheelRad=objSize+objDist+60;
+        var nubX=null;
+        var nubY=null;
+        var numDots=3;
+        var orientation = Math.random()*180;
+
+
+
+        var srcitem00 = "https://psyc241.ucsd.edu/S_Tim/UMI_Task_v7_centerCue_fix/support/gaborT0.png";
+        var srcitem01 = "https://psyc241.ucsd.edu/S_Tim/UMI_Task_v7_centerCue_fix/support/gaborT1.png";
+        var srcitem20 = "https://psyc241.ucsd.edu/S_Tim/UMI_Task_v7_centerCue_fix/support/gaborN0.png";
+        var srcitem21 = "https://psyc241.ucsd.edu/S_Tim/UMI_Task_v7_centerCue_fix/support/gaborN1.png";
+
+        var realtime = []
+        var prestim     = 50;
+        var stimdur     = 5000;
+        var probstimdur = 500
+        var phasedurIni = 1000 // - duration of the 20 seconds adapting orientation
+        var phasedur = 500 // - duration of the 5 seconds adapting orientation
+        var phasedurProb = 250 // - duration of the 500 ms probe orientation
+        var noisedur    = 200;
+        var interstim   = 300;
+        var feedbacktime = 500;
+
+        var nTrials     = 158;
+
+        var trialStruct = [];
+
+        var allcolAng =[];
+        var rt=[];
+        var moveLast=0;
+        var isTest=false;
+
+
+        var GaborTrials = [];
+        for (var irep = 0; irep < nTrials; irep++){
+
+          var curOrient1 = (Math.random() * 180);
+          var noiseOrient1 = (Math.random() * 180);
+          var noiseOrient2 = (Math.random() * 180);
+
+          var angles = wrap([orientation, curOrient1], 90);
+          var noise = wrap([noiseOrient1, noiseOrient2], 90);
+
+          GaborTrials.push({
+            'orients': angles,
+            'correctAngle': angles[1],
+            'noise': noise,
+          });
+
+
+        }
+
+
+
+        shuffle(GaborTrials);
+        var trialOrder = [];for (itrl = 0; itrl<nTrials;itrl++){trialOrder.push(itrl)};
+
+        var selColor=[];var selAng=[];
+        for (var item=0;item<numDots;item++){selColor[item]='#FFFFFF';selAng[item]=null};
+
+
+        function wrap(v,bound) {
+          w = Array(v.length)
+          for (var i=0; i<v.length; i++) {
+
+
+            if (v[i]>=(-bound)) { w[i] = ((v[i]+bound)%(bound*2) )-bound;}
+            if (v[i]<(-bound)) { w[i] = ((v[i]+bound)%(bound*2) + bound*2)-bound;}
+
+          }
+          return w;
+        }
+
+
+        function shuffle(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex;
+
+          // While there remain elements to shuffle...
+          while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
+        }
+
+
+        var isTest=false;
+        var isTrain = false;
+
+
+        function makeCrosshair(){
+            // Draw rectangles
+                makeRectangle('cross1',centerX,centerY,4,12,false,'#000000','#000000');
+                makeRectangle('cross2',centerX,centerY,12,4,false,'#000000','#000000');
+        }
+
+        function makeColorWheelBW(){
+            makeCircle('circout',centerX,centerY,wheelRad+objSize*0.05,false,0,'#000000','#808080')
+            makeCircle('circin',centerX,centerY,wheelRad,false,0,'#808080','#808080')
+        }
+        function makeColorNub(){
+            // Draw nub on color wheel using
+            makeCircle('colorWheelNub',centerX+nubX,centerY+nubY,5,false,0,'#d3d3d3','#d3d3d3');
+            makeCircle('colorWheelNub',centerX-nubX,centerY-nubY,5,false,0,'#d3d3d3','#d3d3d3');
+        }
+
+
+        var st=null;
+        function startTime(){
+            var d = new Date();
+            st=d.getTime();
+        }
+
+        function endTime(){
+
+            var d = new Date();
+            timeDif=d.getTime()-st;
+            return timeDif;
+        }
+
+
+        var curTrial = 0;
+
+        function trialIsOver() {
+
+            //givefeedback
+            erase(ctx1);
+            clear();
+            feedback(Math.abs(wrap([selAng-GaborTrials[curTrial].correctAngle],90)[0]));
+            drawObjects(ctx1,objects);
+            setTimeout(function(){
+
+              var curtrialStruct = GaborTrials[curTrial];
+
+              curtrialStruct.respAng = allcolAng[curTrial];
+              curtrialStruct.rt = rt[curTrial];
+              curtrialStruct.realtime = realtime;
+
+              trialStruct.push(curtrialStruct);
+
+              // console.log(curTrial)
+
+              curTrial = curTrial+1 ;
+
+              if (curTrial >= nTrials){
+
+                  Done();
+                  // $('#submitButton'.show());
+              } else {
+
+                  showTrial(trialOrder[curTrial]);
+                  startTrialTime = new Date();
+              }
+
+
+            },feedbacktime)
+        }
+
+
+        function showTrial(whichtrial){
+        	// var pointer = [1,2];
+             isTest=false;
+
+             p = [];
+
+             p.oL = GaborTrials[whichtrial].orients[0];
+             p.oR = GaborTrials[whichtrial].orients[1];
+             p.noL = GaborTrials[whichtrial].noise[0];
+             p.noR = GaborTrials[whichtrial].noise[1];
+
+             //p.probeDir = [1,2][Math.abs(!GaborTrials[whichtrial].probeLeft)];
+             p.cueDir = GaborTrials[whichtrial].cueDirec;
+
+             p.targetang = GaborTrials[whichtrial].orients[0];
+             p.whichtrial = whichtrial;
+             realtime = [];
+             prestim = 1000;
+             curprobe = p.probeDir;
+             // console.log(curprobe)
+
+             erase(ctx1);
+             clear();
+             // makeCrosshair();
+             drawObjects(ctx1,objects);
+             initialT0(p);
+             followT0(p);
+             initialN0(p);
+             followN0(p);
+             interstim0(p)
+             initialT1(p);
+             followT1(p);
+             initialN1(p);
+             followN1(p);
+             Resp(p);
+
+        }
+
+
+        function initialT0(p){
+            // Initial
+            for(let i=0; i<5; i++) {
+                setTimeout(function () {
+                    // Draw stimuli
+                    erase(ctx1);
+                    clear();
+
+                    c = makeIm('#itemR', centerX, centerY, picsiz, picsiz, window['srcitem00'], 1, p.oL) // item 1a
+
+                    drawImb(ctx1, c); // dramIma
+                    makeCrosshair();
+                    drawObjects(ctx1, objects);
+
+                    var DT00 = new Date();
+                    T00 = DT00.getTime();
+                    realtime.push(T00);
+                    // console.log(T0);
+                }, prestim + phasedur * (i * 2));
+            }
+        }
+
+        function followT0(p){
+            // follow
+            for(let i=0; i<5; i++) {
+                setTimeout(function () {
+                    // Draw stimuli
+                    erase(ctx1);
+                    clear();
+                    c = makeIm('#itemL', centerX, centerY, picsiz, picsiz, window['srcitem01'], 1, p.oL) // item 1b
+
+                    drawImb(ctx1, c);
+                    makeCrosshair();
+                    drawObjects(ctx1, objects);
+
+                    var DT0 = new Date();
+                    T0 = DT0.getTime();
+                    realtime.push(T0);
+                    // console.log(T0);
+                }, prestim + phasedur * ((i * 2) + 1));
+            }
+        }
+
+        function initialN0(p){
+            // follow
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                 c = makeIm('#itemL',centerX-LRpos,centerY,picsiz,picsiz,window['srcitem20'],1, p.noL) // noise 1a
+
+                 drawImb(ctx1,c); // dramIma
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+
+                 clear();
+                 makeCrosshair();
+
+
+                var DT1 = new Date();
+                T1 = DT1.getTime();
+                realtime.push(T1);
+                // console.log(T0);
+            },prestim+stimdur);
+        }
+
+        function followN0(p){
+            // follow
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                c = makeIm('#itemL',centerX-LRpos,centerY,picsiz,picsiz,window['srcitem21'],1, p.noL) // noise 1b
+
+               drawImb(ctx1,c); // dramIma
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                var DT2 = new Date();
+                T2 = DT2.getTime();
+                realtime.push(T2);
+                // console.log(T0);
+            },prestim+stimdur+noisedur);
+        }
+
+        function interstim0(p){
+            // follow
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                var DT3 = new Date();
+                T3 = DT3.getTime();
+                realtime.push(T3);
+                // console.log(T0);
+            },prestim+stimdur+noisedur+noisedur);
+        }
+
+        // second target starts here
+        function initialT1(p){
+            // Initial
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                c = makeIm('#itemR',centerX+10,centerY,picsiz,picsiz,window['srcitem00'],1, p.oR) // item 1a
+                drawImb(ctx1,c); // dramIma
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                var DT00 = new Date();
+                T00 = DT00.getTime();
+                realtime.push(T00);
+                // console.log(T0);
+            },prestim+stimdur+noisedur+noisedur+interstim);
+        }
+
+        function followT1(p){
+            // follow
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                c = makeIm('#itemL',centerX,centerY,picsiz,picsiz,window['srcitem01'],1, p.oR) // item 1b
+                drawImb(ctx1,c); // dramIma
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                var DT0 = new Date();
+                T0 = DT0.getTime();
+                realtime.push(T0);
+                // console.log(T0);
+            },prestim+stimdur+noisedur+noisedur+interstim+phasedurProb);
+        }
+
+        function initialN1(p){
+            // follow
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                 c = makeIm('#itemL',centerX-LRpos,centerY,picsiz,picsiz,window['srcitem20'],1, p.noR) // noise 1a
+                drawImb(ctx1,c); // dramIma
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                var DT1 = new Date();
+                T1 = DT1.getTime();
+                realtime.push(T1);
+                // console.log(T0);
+            },prestim+stimdur+noisedur+noisedur+interstim+probstimdur);
+        }
+
+        function followN1(p){
+            // follow
+            setTimeout(function(){
+                // Draw stimuli
+                erase(ctx1);
+                clear();
+                 c = makeIm('#itemL',centerX-LRpos,centerY,picsiz,picsiz,window['srcitem21'],1, p.noR) // noise 1b
+                drawImb(ctx1,c); // dramIma
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                var DT2 = new Date();
+                T2 = DT2.getTime();
+                realtime.push(T2);
+                // console.log(T0);
+            },prestim+stimdur+noisedur+noisedur+interstim+probstimdur+noisedur);
+        }
+
+        //deleted function for showing the probe
+
+
+        function Resp(p){
+            // Cue
+            setTimeout(function(){
+
+                var DT5 = new Date();
+                T5 = DT5.getTime();
+                realtime.push(T5);
+                targAng = p.targetang;
+
+                erase(ctx1);
+                clear();
+                makeColorWheelBW();
+                drawObjects(ctx1,objects);
+
+                isTest=true;
+                startTime();
+
+            },prestim+stimdur+noisedur+noisedur+interstim+probstimdur+noisedur+noisedur);
+        }
+
+        function showFirstTrial() {
+            isTrain = false;
+            $(document).off("keypress.trialWait");
+            // Draw first fixation
+            makeCrosshair();
+            drawObjects(ctx1,objects);
+            // Begin
+            showTrial(trialOrder[0]);
+            startTrialTime = new Date();
+            $('.trialDiv').hide();
+        }
+
+        function showPractice_f1(){
+            if ($(window).width() >= 600 && screen.width*.8 < $(window).width()) { // && screen.width*.8 < $(window).width())
+
+                $('#instructions').hide();
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                $('#frame1').show();
+                // Begin
+                $(document).on("keypress.trialWait", PressedKey);
+
+                function PressedKey(evt) {
+                    if (evt.which == 32) {
+                        showPractice_f21();
+                    }
+                }
+            }
+        }
+
+        function showPractice_f21() {
+            $(document).off("keypress.trialWait");
+            $('#frame1').hide();
+
+            erase(ctx1);
+            clear();
+            p = [];
+            p.oL = wrap([orientation],90)[0];
+            p.oR = 80;
+            if(Math.abs(Math.abs(p.oR) - p.oL)==10){p.oR = 10;}
+            p.noL = 15;
+            p.noR = 5;
+            p.targetang = 40;
+            p.probeDir = 1;
+            p.cueDir = 2;
+            initialT0(p);
+            followT0(p);
+            initialN0(p);
+            followN0(p);
+            interstim0(p)
+            initialT1(p);
+            followT1(p);
+            initialN1(p);
+            followN1(p);
+		    setTimeout(function(){
+            $('#frame21').show();
+            $(document).on("keypress.trialWait", PressedKey);
+            function PressedKey(evt) { if (evt.which == 32) {showPractice_f22();}}
+         },6500)
+        }
+
+        function showPractice_f22(){
+            $(document).off("keypress.trialWait");
+            $('#frame21').hide();
+            erase(ctx1);
+            clear();
+            c = makeIm('#itemL',centerX,centerY,picsiz,picsiz,srcitem20,1,10)
+            drawImb(ctx1,c);
+            makeCrosshair();
+            drawObjects(ctx1,objects);
+            $('#frame22').show();
+            $(document).on("keypress.trialWait", PressedKey2);
+            function PressedKey2(evt) { if (evt.which == 32) {showPractice_f4();}}
+        }
+
+
+
+        function showPractice_f4(){
+                $(document).off("keypress.trialWait");
+                erase(ctx1);
+                clear();
+
+                isTrain = true;
+                $('#frame22').hide();
+                makeColorWheelBW();
+                makeCrosshair();
+                drawObjects(ctx1,objects);
+
+                $('#frame4').show();
+        }
+
+
+
+        function showPractice_f5(){
+            $(document).off("keypress.trialWait");
+            thiserr0 = Math.abs(wrap([selAng-p.oR],90)[0]);
+            console.log(thiserr0);
+            $('#frame4').hide();
+            erase(ctx1);
+            clear();
+            feedback(thiserr0);
+            drawObjects(ctx1,objects);
+            $('#frame5').show();
+            $(document).on("keypress.trialWait", function press5 (evt) { evt.preventDefault(); showPractice_f6();});
+        }
+
+        function showPractice_f6(){
+            $(document).off("keypress.trialWait");
+            thiserr = Math.abs(wrap([selAng-p.oR],90)[0]);
+
+            $('#frame5').hide();
+            erase(ctx1);
+            clear();
+
+            makeCrosshair();
+
+            drawObjects(ctx1,objects);
+            $('#frame6').show();
+            //$(document).on("keypress.trialWait", function press6 (evt) { evt.preventDefault();  if (IsTurkPreview() == true) {pre_assignment();}});
+            $(document).on("keypress.trialWait", function press6 (evt) { evt.preventDefault();  pre_assignment();});
+            // - show the stimuli without text for 20 seconds
+        }
+
+        function pre_assignment(){
+            $('#frame6').hide();
+            $(document).off("keypress.trialWait");
+
+            for(let i = 0; i<20; i++) {
+                if(i%2 == 0) {
+                    setTimeout(function show0(){
+                        erase(ctx1);
+                        clear();
+                        c = makeIm('#itemL', centerX, centerY, picsiz, picsiz, srcitem00, 1, wrap([orientation], 90)[0])
+
+                        makeCrosshair();
+
+                        drawImb(ctx1, c);
+                        drawObjects(ctx1, objects);
+                    }, phasedurIni*i);}
+                else{
+                    setTimeout(function show1(){
+                        erase(ctx1);
+                        clear();
+                        c = makeIm('#itemL', centerX, centerY, picsiz, picsiz, srcitem01, 1, wrap([orientation], 90)[0])
+
+                        makeCrosshair();
+
+                        drawImb(ctx1, c);
+                        drawObjects(ctx1, objects);
+                    },phasedurIni*i);}
+
+                }
+            setTimeout(function start(){
+                erase(ctx1);
+                clear();
+                showFirstTrial();
+            }, 20000);
+        }
+
+
+        function Done() {
+
+            $("#myCanvas").hide();
+            $('#Survey').show()
+            //$("#done").show();
+
+            var dataToServer = {};
+        //    dataToServer.id = getParameterByName("id"); /* getParameterByName("code") */
+        //    dataToServer.experimenter = 'S_Tim';
+        //    dataToServer.experimentName = 'adaptTask_v1';
+        //    dataToServer.curData = JSON.stringify(trialStruct);
+        //    $.post("save.php", dataToServer, AfterSuccessDataSaving).fail(AfterFailedSaving);
+        }
+
+        function AfterSuccessDataSaving() {
+          // After they are done, send them here:
+          // window.location = "https://ucsd.sona-systems.com/webstudy_credit.aspx?experiment_id=1267&credit_token=805f6634de5a46b3aecffe2818d8d90c&survey_code=" + getParameterByName("code");
+          //$('#submitButton').show();
+          $('#done').html("All done, thanks! Please click submit button.");
+
+          console.log("Saved!");
+        }
+
+        function AfterFailedSaving() {
+          console.log("oops, failed to save");
+
+          // window.location = "https://ucsd.sona-systems.com/webstudy_credit.aspx?experiment_id=1267&credit_token=805f6634de5a46b3aecffe2818d8d90c&survey_code=" + getParameterByName("code");
+          //$('#submitButton').show();
+          $('#done').html("All done, thanks! Please click submit button.");
+
+        }
+
+        $('#startExperiment').click(showPractice_f1);
+        $('.responseButton').click(trialIsOver);
+    </script><!-- do not put this on Turk --><!-- <input type="submit" id="submitButton">
