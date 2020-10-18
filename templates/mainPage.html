@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet"/>
-    <link href="mainPage.css" rel="stylesheet"/>
-    <title>Document</title>
-     
+    <link href="{{ url_for('static', filename = 'mainPage.css') }}" rel="stylesheet"/>
+    <title>mainpage</title>
+
 </head>
 <body>
     <div class="v10_3">
@@ -34,11 +35,35 @@
         </div>
         <div class="name"></div>
         <div class="v10_21"></div>
-        <div class="v10_22"></div>
+        <div class="v10_22" onclick = "click()"></div>
         <div class="v10_17"></div>
         <div class="v10_19"></div>
         <div class="v10_18"></div>
-        <div class="plus">+</div>
+        <div class="plus" onclick = "clickaddNew()">+</div>
     </div>
+<script>
+    function clickaddNew() {
+    alert("Handler for .click() called.");
+    window.location.href = "addNew";
+}
+
+function clickSingleNotebook(){
+    window.location.href = "SingleNotebook";
+}
+
+function clickCommunity(){
+    window.location.href = "Community";
+}
+
+function clickcalender(){
+    window.location.href = "calender";
+}
+
+function clickmainpage(){
+    window.location.href = "";
+}
+
+</script>
 </body>
 </html>
+
