@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "diaryexchanger",
+  "private_key_id": "9a1c77c84ea339063ae20777bbabf7d723decf82",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAJgTxABEytAUw\nB5WGRSRN6wuy/8SFV4b6HCCLwtUMRkX/ODCu2y7p4TGQeuc3HifXyFDyF38GsPBp\nXmuxIIcLdAVIhltvdinwLzudjIcO+x+JIl7RXD1JVe5ThCeNrMBiqgYI0euFucSs\nBO4CXSXaT43XJTqR3xh+VtMMpKxmR9ILJGjs/U+W0rKY+zmUTc4QCMV6iHI16ebB\nt54pmTpkOJcdqNhqS7f14tmVrqh5yYdIaJNdTdaQ/7nLvQXgb0EUS/PCfwXbj0mC\nS/vS2F1F31jzggEpOENIbBoL/vKKqosF31iu2nTYDmYj0l8X2gwd6wEFzf4kBSm0\nyX9irlGHAgMBAAECggEAUPmUuoWHOeFgkEmZ61BHCOklcIVV6cWlldB1rMBqLTaO\nOAyTg5TN8/UZgKQyvWkhbE+4QRXCy+yUHCuU4bvt/VcjBNnOPa5D5Traej4nCpqs\nwwtvfvZKw5WJjruSOaPUHaA+U8g3Y48SgVXAgdGEarh88252fNPSTCfF4D2jg6RD\nt49Z+xszL2anrmz2FSC6X5gzAFxIHJlHPJGlqgSOFKt2wEL6lDpb0mFCLGKQVnna\nmCqE5KzIYfgPUrnM7+41lX5ThvxzHbEWS151aLXuB05Hu5nrAy5h1eQYzfi+8Max\n6BLubWW+wBx3WeC0L24v4fUPAXnAy42GODXSs9sdLQKBgQD2fP7ci/TUdepIThz9\nJvNwunA528QD/2QI/AdsNUpmuFlI1R9StmVVmGD8TA0kC4S6sPDOcyaY5UTWmVaL\naVsKVmdJcO3I3fSUiX37n6uTOCHrgK2tA8EWUcoG1dt6kPo+IgYktEFGEJHNxnh0\nROT26yPFMVxJVnwIyL2ef9Pg8wKBgQDHkDaK/5Ir5klf1zrBiAR3pX/6A+QfO06L\nfvv5EDqsv4XArSzDQwoTG3DQNSAYQTgKH+6NhArusNG/RFp/GisUqEAm0HZTBtgC\nMY6uPsIc8NvrBNEuRrz1UXPucKw5+6qX72nIgTQPQGaXLy0srOwueCdcGZ8/amA/\nxuGgN+BSHQKBgQDFPbLIE2rAVPc8Et3ZqcCmVVqWwghx1n1bPypFacN2vVAdGwYs\nru4Z94ysd8MQM/NrXUnlOnoJYXWbcCqz9oO2mvud5jMxSIN+FSPuJZArh4CFLnxL\n9bQeQyayH5G426iT7bAS0PdmtL2n94jOKY87E2CVXHFn8j/g25n46ntHBwKBgQDC\nxsnFfs5PFJQW+/33+GbL1HeFMRkNNphh5I3QOPvbsY69UQi4iA0kOwsv3Do4Eie9\nEg+GhhMZhvEhKnjdR1A2+ESs3ZgvTyWzdmUZQl25W4h56Ri1fwtcsKRjXAttCGon\not/vd9O08xlug/gme5yFenaIGOXqQkww009STlceLQKBgGlVAxBpE+TD/oWSKv38\n+uwa0Cl0Jax1m/DNQU2rtGJOesAmyrriYPUConkarDAgdHxOmazBGh76FaBGEgAN\nFE0Zu9gYgeb9G2izbeLc1TLmUdnvc5FpeQoqwDES8pzifv4s7cL8KwTGwmm6NP34\nyxL6DPyHH4VXdaEdYyld2Uhi\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-vhdo2@diaryexchanger.iam.gserviceaccount.com",
+  "client_id": "101611574279243428362",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-vhdo2%40diaryexchanger.iam.gserviceaccount.com"
+}
