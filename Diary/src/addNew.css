@@ -1,0 +1,292 @@
+* {
+  overflow-x: hidden;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.plus {
+  width: 53px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 231px;
+  left: 288px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+}
+.v10_5 {
+  width: 100%;
+  height: 2048px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.header {
+  width: 100%;
+  height: 126px;
+  background: rgba(109,128,130,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  font-family: Signika;
+  font-weight: Regular;
+  font-size: 80px;
+  opacity: 1;
+  text-align: center;
+  color:  rgb(255, 255, 255);
+}
+.tool_box {
+  width: 361px;
+  height: 106px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 170px;
+  left: 1049px;
+  overflow: hidden;
+}
+
+.tool {
+  width: 42px;
+  height: 42px;
+  background: rgba(231,231,231,1);
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+  font-family: Signika;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+  color:  rgb(85, 102, 104);
+}
+
+#tool1{
+  top: 0px;
+  left: 0px;
+}
+#tool2{
+  top: 0px;
+  left: 50px;
+}
+#tool3{
+  top: 0px;
+  left: 100px;
+}
+#tool4{
+  top: 0px;
+  left: 150px;
+}
+#tool5{
+  top: 0px;
+  left: 200px;
+
+}
+#tool6{
+  top: 0px;
+  left: 250px;
+}
+#tool7{
+  top: 64px;
+  left: 70px;
+}
+#tool8{
+  top: 64px;
+  left: 120px;
+}
+#tool9{
+  top: 64px;
+  left: 170px;
+}
+#tool10{
+  top: 64px;
+  left: 220px;
+}
+#tool11{
+  top: 64px;
+  left: 270px;
+}
+#tool12{
+  top: 64px;
+  left: 320px;
+}
+
+.feel{
+  width: 67px;
+  height: 67px;
+  background-image: rgba(196,196,196,1);
+  position: absolute;
+
+}
+#feel1{
+  background: url("img/sleep.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 289px;
+  left: 491px;
+}
+#feel2{
+  background: url("img/shout.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 289px;
+  left: 569px;
+}
+#feel3{
+  background: url("img/speechless.PNG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 289px;
+  left: 647px;
+}
+#feel4{
+  background: url("img/hmm.PNG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 289px;
+  left: 725px;
+}
+#feel5{
+  background: url("img/cry.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 289px;
+  left: 803px;
+}
+#feel6{
+  background: url("img/love.PNG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 289px;
+  left: 881px;
+}
+
+
+.current {
+  width: 457px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 191px;
+  left: 491px;
+  font-family: Signika;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.tags {
+  width: 315px;
+  height: 107px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 170px;
+  left: 33px;
+  overflow: hidden;
+}
+.tag {
+  width: 93px;
+  height: 39px;
+  background: rgba(231,231,231,1);
+  opacity: 1;
+  position: absolute;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+  font-family: Signika;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+  color:  rgb(85, 102, 104);
+}
+#tag1 {
+  top: 0px;
+  left: 0px;
+}
+#tag2 {
+  top: 0px;
+  left: 111px;
+}
+#tag3 {
+  top: 0px;
+  left: 222px;
+}
+#tag4 {
+  top: 68px;
+  left: 0px;
+}
+#tag5 {
+  top: 68px;
+  left: 111px;
+}
+#tag_more {
+  top: 68px;
+  left: 222px;
+}
+
+.write {
+  width: 1000px;
+  height: 1400px;
+  background: rgba(231,231,231,1);
+  opacity: 1;
+  position: absolute ;
+  top: 398px;
+  left: 231px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+}
+
+.saved_to {
+  width: 279px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 1872px;
+  left: 959px;
+  font-family: Signika;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.finish {
+  width: 321px;
+  height: 74px;
+  background: rgba(196,196,196,1);
+  opacity: 1;
+  position: absolute;
+  top: 1946px;
+  left: 564px;
+  overflow: hidden;
+}
+.finish_text {
+  width: 307px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 1959px;
+  left: 571px;
+  font-family: Signika;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
